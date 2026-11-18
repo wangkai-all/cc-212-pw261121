@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>集装箱堆存费用分析</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>集装箱堆存费用分析</h1>
+      <div class="sub">按实际占用区间还原堆存费 · 自然日 / 满24小时口径不混用 · 本地虚构数据演示</div>
+    </div>
+    <div class="spacer"></div>
+    <button id="loadSample" class="primary">载入 / 重置虚构样例</button>
+    <button id="themeToggle">切换深浅色</button>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="section-title">筛选</div>
+      <div class="filter-row">
+        <label>箱号搜索
+          <input id="searchBox" type="search" placeholder="如 CSLU2000001" />
+        </label>
+        <label>状态
+          <select id="statusFilter">
+            <option value="all">全部</option>
+            <option value="final">已结算</option>
+            <option value="zero">零费用</option>
+            <option value="open">在场（预提）</option>
+            <option value="held">费用挂起</option>
+          </select>
+        </label>
+        <label class="check-row">
+          <input id="anomalyOnly" type="checkbox" /> 只看异常 / 冲突 / 补录
+        </label>
+      </div>
+      <div class="section-title">集装箱</div>
+      <div id="containerList" class="container-list"></div>
+    </aside>
+
+    <main>
+      <div id="kpi"></div>
+      <div id="tabs" class="tabs"></div>
+      <div id="main"></div>
+    </main>
+  </div>
+
+  <script type="module" src="js/ui/app.js"></script>
+</body>
+</html>

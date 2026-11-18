@@ -1,0 +1,16 @@
+{
+  "name": "container-storage-fee-analyzer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "按实际占用区间还原集装箱堆存费用的纯前端应用（自然日/满24小时双口径，零构建零运行时依赖）",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/engine.test.js",
+    "serve": "python3 -m http.server 8000",
+    "test:dom": "node tests/dom.smoke.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

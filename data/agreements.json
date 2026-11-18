@@ -1,0 +1,89 @@
+[
+  {
+    "agreement_id": "A001",
+    "version": 1,
+    "scope_type": "global",
+    "scope_value": "*",
+    "billing_basis": "calendar_day",
+    "free_days": 5,
+    "effective_from": "2026-01-01T00:00:00Z",
+    "supersedes_at": "2026-10-15T00:00:00Z",
+    "rates": [
+      { "type": "*", "from_day": 1, "rate": 40 },
+      { "type": "*", "from_day": 11, "rate": 60 },
+      { "type": "*", "from_day": 21, "rate": 80 }
+    ],
+    "note": "全局自然日协议 v1：进场当日起算，出场当日不计"
+  },
+  {
+    "agreement_id": "A001",
+    "version": 2,
+    "scope_type": "global",
+    "scope_value": "*",
+    "billing_basis": "calendar_day",
+    "free_days": 7,
+    "effective_from": "2026-10-15T00:00:00Z",
+    "rates": [
+      { "type": "*", "from_day": 1, "rate": 45 },
+      { "type": "*", "from_day": 11, "rate": 65 },
+      { "type": "*", "from_day": 21, "rate": 85 }
+    ],
+    "note": "全局自然日协议 v2：免费期 5 天调整为 7 天，费率整体上调 5 元"
+  },
+  {
+    "agreement_id": "A002",
+    "version": 1,
+    "scope_type": "container",
+    "scope_value": "CSLU2000006",
+    "billing_basis": "rolling_24h",
+    "free_days": 3,
+    "effective_from": "2026-01-01T00:00:00Z",
+    "rates": [
+      { "type": "*", "from_day": 1, "rate": 50 },
+      { "type": "*", "from_day": 6, "rate": 75 }
+    ],
+    "note": "CSLU2000006 专属：满 24 小时口径，免费 3 个 24h 块"
+  },
+  {
+    "agreement_id": "A003",
+    "version": 1,
+    "scope_type": "container",
+    "scope_value": "CSLU2000011",
+    "billing_basis": "calendar_day",
+    "free_days": 7,
+    "effective_from": "2026-01-01T00:00:00Z",
+    "supersedes_at": "2026-10-20T00:00:00Z",
+    "rates": [
+      { "type": "*", "from_day": 1, "rate": 40 }
+    ],
+    "note": "CSLU2000011 v1：自然日口径"
+  },
+  {
+    "agreement_id": "A003",
+    "version": 2,
+    "scope_type": "container",
+    "scope_value": "CSLU2000011",
+    "billing_basis": "rolling_24h",
+    "free_days": 5,
+    "effective_from": "2026-10-20T00:00:00Z",
+    "rates": [
+      { "type": "*", "from_day": 1, "rate": 42 }
+    ],
+    "note": "CSLU2000011 v2：口径由自然日改为满 24 小时（演示口径冲突，费用默认挂起）"
+  },
+  {
+    "agreement_id": "A004",
+    "version": 1,
+    "scope_type": "container",
+    "scope_value": "CSLU2000012",
+    "billing_basis": "calendar_day",
+    "free_days": 5,
+    "effective_from": "2026-09-01T00:00:00Z",
+    "rates": [
+      { "type": "20GP", "from_day": 1, "rate": 35 },
+      { "type": "40GP", "from_day": 1, "rate": 55 },
+      { "type": "*", "from_day": 1, "rate": 50 }
+    ],
+    "note": "CSLU2000012 专属：分箱型费率，未列箱型回落通用费率"
+  }
+]
